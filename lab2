@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            double nn, nk;
+
+            do
+            {
+                Console.WriteLine("Введите значение индекса nn: ");
+
+                str = Console.ReadLine();
+                nn = Convert.ToInt32(str);
+
+                if (nn < 0)
+                Console.WriteLine("Неверное значение индекса! Введите nn > 0 или nn=0 ");
+
+            } while (nn < 0);
+
+
+            do
+            {
+                Console.WriteLine("Введите значение индекса nk: ");
+
+                str = Console.ReadLine();
+                nk = Convert.ToInt32(str);
+
+                if (nn > nk)
+                    Console.WriteLine("Неверное значение индекса! Введите nk > nn или nk=nn");
+
+            } while (nn > nk);
+
+
+            double s = 0;
+            
+            double k = nn;
+     
+            do
+              {
+                 
+               s+=  (k * k - 1) / (Math.Pow(-1, (k + 1)) * k * k + 7);
+                k++;
+                              
+             
+            } while (k<nk);
+
+            
+             Console.WriteLine("Сумма заданого числового ряда S= " + s);
+ 
+        }
+    }
+}
