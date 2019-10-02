@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int U, I1, I2;
+
+            Console.WriteLine("Введите значение напряжения резисторов U: ");
+            
+            str = Console.ReadLine();
+            U = Convert.ToInt32(str);
+            
+            Console.WriteLine("Введите значение силы тока первого резистора I1: ");
+
+            str = Console.ReadLine();
+            I1 = Convert.ToInt32(str);
+
+            Console.WriteLine("Введите значение силы тока второго резистора I2: ");
+
+            str = Console.ReadLine();
+            I2 = Convert.ToInt32(str);
+
+            float R1, R2;
+
+            R1 = U / I1;
+            Console.WriteLine("Сопротивление первого резистора R1= " + R1);
+            R2 = U / I2;
+            Console.WriteLine("Сопротивление второго резистора R2= " + R2);
+            
+            float R0 = (R1*R2)/(R1+R2) ;
+            
+            Console.WriteLine("Общее сопротивление резисторов R0= " + R0);
+
+
+        }
+    }
+}
