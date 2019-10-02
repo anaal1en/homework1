@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a;
+            
+            do
+            {
+                Console.WriteLine("Введите a: ");
+
+                str = Console.ReadLine();
+                a = Convert.ToInt32(str);
+
+                if (a >= 100 || a < 10)
+                    Console.WriteLine("Неверное значение! а должно быть < 100 и  >= 10");
+
+             } while (a >= 100 || a < 10);
+
+            
+                if (a % 2 == 0)
+
+                    Console.WriteLine("a является четным двузначным числом");
+
+                else
+                    Console.WriteLine("a НЕ является четным двузначным числом");
+            
+        }
+    }
+}
