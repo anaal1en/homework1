@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+
+            Console.Write("Введите размер массива n: ");
+
+           int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\n");
+
+            int[] array = new int[n];
+
+            Console.WriteLine("Введите элементы массива: ");
+
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write("a[{0}]=", i + 1);
+                str = Console.ReadLine();
+                array[i] = Convert.ToInt32(str);
+
+            }
+
+            
+
+            Console.Write("\n");
+
+            int tempeven=0;
+
+            Console.WriteLine("Четные элементы массива: ");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 == 0 && array[i]!=0)
+                { 
+                    tempeven = array[i];
+                    Console.WriteLine("a[{0}]={1}", i + 1, array[i]);
+                    tempeven++;
+                }
+            }
+
+            if (tempeven==0)
+                
+             Console.WriteLine("Четных элементов нет");
+
+            Console.Write("\n");
+
+
+            int tempodd=0;
+
+            Console.WriteLine("Нечетные элементы массива: ");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 == 1 && array[i] != 0)
+                {
+                    tempodd = array[i];
+                    Console.WriteLine("a[{0}]={1}", i + 1, array[i]);
+                    tempodd++;
+                }
+                  
+            }
+            
+
+            if (tempodd==0)
+                Console.WriteLine("Нечетных элементов нет");
+
+            
+
+            Console.ReadKey();
+        }
+    }
+}    
+
