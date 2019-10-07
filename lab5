@@ -1,0 +1,149 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+            Console.Write("Введите количество строк массива n: ");
+
+            int n = int.Parse(Console.ReadLine());
+                                
+            Console.Write("\n");
+
+            Console.Write("Введите количество столбцов массива m: ");
+
+            int m = int.Parse(Console.ReadLine());
+            
+            Console.Write("\n");
+            
+
+            int[,] array = new int[n, m];
+
+            Console.WriteLine("Введите элементы массива: ");
+
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write("a[{0}][{1}]=", i + 1, j+1);
+                    
+                    array[i,j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.Write("\n");
+
+            Console.WriteLine("Вы ввели матрицу:");
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write(array[i,j]+ "\t");
+                    
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.Write("\n");
+
+
+            Console.WriteLine("Минимальные элементы в строках:");
+     
+            
+            for (int i = 0; i < n; i++)
+            {
+               int min = array[i, 0];
+                for(int j=0; j < m; j++)
+                
+                {
+                    if (array[i, j] < min)
+                    {
+                        min = array[i, j];
+                        
+                    }
+                }
+                Console.WriteLine("Строка {0}: min = {1}", i+1, min);
+            }
+            
+            Console.Write("\n");
+
+
+            Console.WriteLine("Максимальные элементы в строках:");
+
+            for (int i = 0; i < n; i++)
+            {
+                int max = array[i, 0];
+                for (int j = 0; j < m; j++)
+                {
+                    if (array[i, j] > max)
+                        max = array[i, j];
+
+                }
+                Console.WriteLine("Строка {0}: max = {1}", i+1, max);
+            }
+
+            Console.Write("\n");
+            
+            
+
+            int Imax = 0, Jmax = 0, Imin = 0, Jmin = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int min = array[i, 0];
+                int max = array[i, 0];
+
+                for (int j = 0; j < m; j++)
+                {
+
+                    if (array[i, j] > max)
+                    {
+                        max = array[i, j];
+                        Imax = i;
+                        Jmax = j;
+                    }
+
+                    if (array[i, j] < min)
+                    {
+                        min = array[i, j];
+                        Imin = i;
+                        Jmin = j;
+                    }
+
+                }
+
+                int z = array[Imax, Jmax];
+                array[Imax, Jmax] = array[Imin, Jmin];
+                array[Imin, Jmin] = z;
+
+                Jmax = 0; Jmin = 0; Imax = i + 1; Imin = i + 1;
+            }
+
+
+
+            Console.WriteLine("Преобразованная матрица:");
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write(array[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
