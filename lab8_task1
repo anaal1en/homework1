@@ -1,0 +1,323 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Garage
+    {
+        public string Name { get; set; }
+
+        public Garage(string name)
+        {
+            Name = name;
+        }
+
+    }
+
+
+    class Auto : Garage
+    {
+        public string color;
+        public int speed;
+        public int year;
+
+        public Auto(string name, string color, int speed, int year) : base(name)
+        {
+
+            this.color = color;
+            this.speed = speed;
+            this.year = year;
+
+            GetInfo();
+        }
+
+        public void GetInfo()
+        {
+            Console.WriteLine($"Марка машины: {Name}\nЦвет: {color}\nСкорость: {speed} км/ч\nГод выпуска: {year}");
+        }
+
+
+
+        class Program
+        {
+            public static void Main(string[] args)
+            {
+
+                Auto lexus = new Auto("Lexus", "yellow", 250, 2019);
+                Console.WriteLine();
+
+                Auto bmw = new Auto("BMW", "black", 370, 2015);
+                Console.WriteLine();
+
+                Auto mercedes = new Auto("Mercedes", "red", 318, 2018);
+                Console.WriteLine();
+
+                Auto audi = new Auto("Audi", "grey", 400, 2017);
+                Console.WriteLine();
+
+                Auto ferrari = new Auto("Ferrari", "white", 450, 2018);
+                Console.WriteLine();
+
+                Auto nissan = new Auto("Nissan", "white", 461, 2019);
+                Console.WriteLine();
+
+                Auto porsche = new Auto("Porsche", "green", 580, 2016);
+                Console.WriteLine();
+
+                Auto mcLaren = new Auto("McLaren", "black", 320, 2017);
+                Console.WriteLine();
+
+                Auto mercedes_2 = new Auto("Mercedes", "black", 383, 2019);
+                Console.WriteLine();
+
+                Auto bmw_2 = new Auto("BMW", "blue", 520, 2018);
+                Console.WriteLine();
+
+
+
+                Console.WriteLine("По какому критерию выбираем машину?\nНажмите 1 - марка машины:Lexus\nНажмите 2 - марка машины:BMW\nНажмите 3 - марка машины:Mercedes\nНажмите 4 - марка машины:Audi\nНажмите 5 - марка машины:Ferrari\nНажмите 6 - марка машины:Nissan\nНажмите 7 - марка машины:Porsche\nНажмите 8 - марка машины:McLaren\n");
+                Console.WriteLine("Нажмите 9 - цвет машины:yellow\nНажмите 10 - цвет машины:black\nНажмите 11 - цвет машины:red\nНажмите 12 - цвет машины:grey\nНажмите 13 - цвет машины:white\nНажмите 14 - цвет машины:green\nНажмите 15 - цвет машины:blue\n");
+                Console.WriteLine("Нажмите 16 - скорость машины:250\nНажмите 17 - скорость машины:370\nНажмите 18 - скорость машины:318\nНажмите 19 - скорость машины:400\nНажмите 20 - скорость машины:450\nНажмите 21 - скорость машины:461\nНажмите 22 - скорость машины:580\nНажмите 23 - скорость машины:320\nНажмите 24 - скорость машины:383\nНажмите 25 - скорость машины:520\n");
+                Console.WriteLine("Нажмите 26 - год выпуска:2015\nНажмите 27 - год выпуска:2016\nНажмите 28 - год выпуска:2017\nНажмите 29 - год выпуска:2018\nНажмите 30 - год выпуска:2019\n");
+                Console.WriteLine("***********************");
+
+
+               for(int i=0; i<4; i++)
+                {
+                    Console.Write("Вы выбрали номер: ");
+                    string text = Console.ReadLine();
+                    Console.WriteLine("_____________________");
+
+
+                    switch (text)
+                    {
+
+                        case "1":
+                            {
+                                lexus.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "2":
+                            {
+                                bmw.GetInfo();
+                                Console.WriteLine();
+                                bmw_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "3":
+                            {
+                                mercedes.GetInfo();
+                                Console.WriteLine();
+                                mercedes_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "4":
+                            {
+                                audi.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "5":
+                            {
+                                ferrari.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "6":
+                            {
+                                nissan.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "7":
+                            {
+                                porsche.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "8":
+                            {
+                                mcLaren.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "9":
+                            {
+                                lexus.GetInfo();
+                                //Console.WriteLine(lexus.color ="yellow");
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "10":
+                            {
+                                bmw.GetInfo();
+                                Console.WriteLine();
+                                mcLaren.GetInfo();
+                                Console.WriteLine();
+                                mercedes_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "11":
+                            {
+                                mercedes.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "12":
+                            {
+                                audi.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "13":
+                            {
+                                ferrari.GetInfo();
+                                Console.WriteLine();
+                                nissan.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "14":
+                            {
+                                porsche.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+
+                        case "15":
+                            {
+                                bmw_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "16":
+                            {
+                                lexus.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "17":
+                            {
+                                bmw.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "18":
+                            {
+                                mercedes.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "19":
+                            {
+                                audi.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "20":
+                            {
+                                ferrari.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "21":
+                            {
+                                nissan.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "22":
+                            {
+                                porsche.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "23":
+                            {
+                                mcLaren.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "24":
+                            {
+                                mercedes_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "25":
+                            {
+                                bmw_2.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "26":
+                            {
+                                bmw.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "27":
+                            {
+                                porsche.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "28":
+                            {
+                                audi.GetInfo();
+                                Console.WriteLine();
+                                mcLaren.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "29":
+                            {
+                                bmw_2.GetInfo();
+                                Console.WriteLine();
+                                mercedes.GetInfo();
+                                Console.WriteLine();
+                                ferrari.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        case "30":
+                            {
+                                mercedes_2.GetInfo();
+                                Console.WriteLine();
+                                lexus.GetInfo();
+                                Console.WriteLine();
+                                nissan.GetInfo();
+                                Console.WriteLine();
+                                break;
+                            }
+                        default:
+                            Console.WriteLine("Вы нажали неизвестную цыфру");
+                            break;
+
+
+                    }
+                } 
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+
