@@ -1,0 +1,119 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class DiskTelephone
+    {
+        
+        public string Name;
+
+        public DiskTelephone ()
+        {
+            Name = "Дисковой телефон->";
+        }
+
+        public void GetInfo()
+        {
+            Console.Write(Name);
+        }
+    }
+
+    class KnopTelephone : DiskTelephone
+    {
+        public string name;
+
+        public KnopTelephone()
+        {
+            name = " Кнопочный телефон->";
+        }
+
+        public void GetInfo()
+        {
+            Console.Write(name);
+        }
+    }
+
+    class CellPhoneBW : KnopTelephone
+    {
+           
+        public CellPhoneBW ()
+        {
+            name = " Мобильный с черно-белым экраном->";
+        }
+
+        public void GetInfo()
+        {
+            Console.Write(name);
+        }
+    }
+
+    class CellPhoneColor : CellPhoneBW
+    {
+         public CellPhoneColor ()
+         {
+             name = " Мобильный с цветным экраном->";
+         }
+
+         public void GetInfo()
+         {
+             Console.Write(name);
+         }
+    }
+
+    class iPhone : CellPhoneColor
+    {
+        public iPhone()
+        {
+            name = " iPhone->";
+        }
+
+        public void GetInfo()
+        {
+            Console.Write(name);
+        }
+    }
+
+    class GoogleGlass : iPhone
+    {
+        public GoogleGlass ()
+        {
+            name = " Google Glass";
+        }
+
+        public void GetInfo()
+        {
+            Console.Write(name);
+        }
+    }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                DiskTelephone phone_1 = new DiskTelephone();
+                phone_1.GetInfo();
+
+                KnopTelephone phone_2 = new KnopTelephone();
+                phone_2.GetInfo();
+
+                CellPhoneBW phone_3 = new CellPhoneBW();
+                phone_3.GetInfo();
+
+                CellPhoneColor phone_4 = new CellPhoneColor();
+                phone_4.GetInfo();
+
+                iPhone phone_5 = new iPhone();
+                phone_5.GetInfo();
+
+                GoogleGlass phone_6 = new GoogleGlass();
+                phone_6.GetInfo();
+
+                Console.ReadKey();
+            }
+        }
+    }
+
