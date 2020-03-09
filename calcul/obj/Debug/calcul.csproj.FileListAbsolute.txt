@@ -1,0 +1,10 @@
+D:\Documents\C#\2 семестр\calcul\calcul\bin\Debug\calcul.exe.config
+D:\Documents\C#\2 семестр\calcul\calcul\bin\Debug\calcul.exe
+D:\Documents\C#\2 семестр\calcul\calcul\bin\Debug\calcul.pdb
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.csprojAssemblyReference.cache
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.Form1.resources
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.Properties.Resources.resources
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.csproj.GenerateResource.cache
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.csproj.CoreCompileInputs.cache
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.exe
+D:\Documents\C#\2 семестр\calcul\calcul\obj\Debug\calcul.pdb
